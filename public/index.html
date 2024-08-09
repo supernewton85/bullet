@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Bulletin Board</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="ad-banner">
+        <script src="https://ads-partners.coupang.com/g.js"></script>
+        <script>
+            new PartnersCoupang.G({
+                "id": 789761,
+                "template": "carousel",
+                "trackingCode": "AF2321653",
+                "width": "1500",
+                "height": "150",
+                "tsource": ""
+            });
+        </script>
+    </div>
+
+    <div class="board-container">
+        <div class="board" id="board1">
+            <div class="board-title">Quick Market</div>
+            <button id="addButton1">+</button>
+            <div class="cardContainer" id="cardContainer1"></div>
+        </div>
+
+        <div class="board" id="board2">
+            <div class="board-title">Issue News</div>
+            <button id="addButton2">+</button>
+            <div class="cardContainer" id="cardContainer2"></div>
+        </div>
+    </div>
+
+    <!-- 글 작성 모달 -->
+    <div id="modal">
+        <input id="author" type="text" placeholder="Your name">
+        <input id="postPassword" type="password" placeholder="Password (if not specified, anyone can delete this post)">
+        <textarea id="postContent" maxlength="100" placeholder="Write your post here..."></textarea>
+        <select id="deleteTime"></select>
+        <button id="saveButton">Save (Ctrl+Enter)</button>
+    </div>
+
+    <!-- 비밀번호 입력 모달 -->
+    <div id="passwordModal">
+        <input id="password" type="password" placeholder="Enter password to delete">
+        <button id="deleteConfirmButton">Delete</button>
+    </div>
+
+    <div class="notice">Inappropriate words and posts not related to the board's purpose will be deleted without warning.</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
